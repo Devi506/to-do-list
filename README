@@ -1,0 +1,19 @@
+To-Do-List
+A simple and elegant To-Do List web application built using HTML, CSS, and JavaScript.
+
+Description
+This project aims to provide a user-friendly interface for managing tasks with features such as adding tasks, marking them as completed, and deleting tasks.
+
+Features
+Add Tasks: Easily add new tasks to the list by entering text in the input field and clicking the "Add" button.
+Delete Tasks: Each task comes with a delete button to remove unwanted tasks from the list.
+Responsive Design: The application is designed to be responsive and works well on various screen sizes.
+
+Usage
+Enter the task you want to add in the input field.
+Click the "Add" button to add the task to the list.
+To delete a task, click the "Delete" button next to the task.
+Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+

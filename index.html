@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* background-image: linear-gradient(to right,#DEBACE,#D6D46D); */
+            font-family: sans-serif;
+           
+            
+        }
+        header{
+            height: 60px;
+            background-image: linear-gradient(to right,#DEBACE,#D6D46D);;
+            
+            
+        }
+        header h1{
+            padding: 10px;
+            text-align: center;
+        }
+        main{
+            width: 500px;
+            height: 450px;
+            border: 2px solid #D6D46D;
+            margin: 50px auto;
+            padding: 30px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #myText{
+            height: 30px;
+            margin-right: 10px;
+            padding: 0 10px;
+            border: 2px solid #D6D46D ;
+        }
+        input{
+           outline-style: none;
+        }
+        #addBtn{
+            background-color: #DEBACE;
+            padding: 5px;
+            border:1px solid #D6D46D ;
+            
+        }
+        #addBtn:hover{
+            background-color: #c7c422;
+            cursor: pointer;
+            border:1px solid #DEBACE ;
+        }
+        
+form{
+    margin: 20px;
+}
+
+     ul{
+            border:1px solid #D6D46D ;
+            background-color: #DEBACE;
+            width: 100%;
+            list-style: none;
+}
+
+li{
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.close{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    top: 0;
+}
+.close:hover{
+    background-color: #c7c422;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TO-DO-LIST</h1>
+    </header>
+    <main>
+     <form>
+        <input type="text" id="myText" placeholder="Enter your text here">
+        <span onclick="myList()"  id="addBtn">Add</span>
+
+     </form>
+     <ul id="myUl">
+        <li>Morning meditation</li>
+        <li>Make a healthy breakfast</li>
+        <li>Water plants and check garden</li>
+     </ul>   
+    </main>
+    
+
+    <script>
+        var list = document.getElementsByTagName('li');
+        for(var i = 0; i < list.length; i++){
+            var span = document.createElement("span");
+            span.className = "close";
+            var close = document.createTextNode("Delete");
+            span.appendChild(close);
+            list[i].appendChild(span);
+        
+        }
+var close = document.getElementsByClassName("close");
+for(i=0;i<close.length;i++){
+    close[i].onclick = function(){
+        var d = this.parentElement;
+        d.style.display = "none";
+    }
+}
+
+        function myList(){
+            var li = document.createElement("li");
+            var myText =document.getElementById("myText").value;
+            var t = document.createTextNode(myText);
+            li.appendChild(t);
+
+            if(myText == ""){
+                alert("Field is Empty");
+            }
+            else{
+                document.getElementById("myUl").appendChild(li);
+            }
+
+            var list = document.getElementsByTagName('li');
+        for(var i = 0; i < list.length; i++){
+            var span = document.createElement("span");
+            span.className = "close";
+            var close = document.createTextNode("Delete");
+            span.appendChild(close)
+            list[i].appendChild(span)
+        
+        }
+        }
+    </script>
+</body>
+</html>
